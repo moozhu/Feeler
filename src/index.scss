@@ -1,0 +1,54 @@
+@import "./css/base/common";
+@import "./css/transition";
+@import "./css/helpers/functions";
+@import "./css/helpers/variables";
+@import "./css/helpers/mixins";
+
+.appear-body {
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    .page-loading{
+        background: rgba(0, 0, 0, .6) !important;
+    }
+}
+
+.page-scroll-window {
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.page-window {
+    position: absolute;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.page-content{
+    padding: 0 rem(10);
+}
+
+.iOS {
+    .fe-header{
+        height: 64px;
+        border-top: 20px solid #fff;
+    }
+    .appear-body,
+    .page-window,
+    .page-scroll-window{
+        top: 64px;
+    }
+
+}

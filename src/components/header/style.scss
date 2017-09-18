@@ -1,0 +1,29 @@
+@import '../../css/helpers/variables';
+
+.fe-header{
+    position: relative;
+    height: 44px;
+    padding: 0 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    .header-left,
+    .fe-header-icon{
+        width: 60px; height: 44px;
+    }
+    .header-left{
+        position: absolute; top: 0; left: 0;
+    }
+    .fe-header-icon{
+        // background: url('../../img/back.png') 15px center no-repeat; background-size: 10px;
+    }
+    .fe-header-title{
+        line-height: 44px;
+        font-size: 17px; color: #333; text-align: center;
+    }
+    .fe-header-button{
+        position: absolute; top: 0; right: 0;
+        width: 60px; line-height: 44px;
+        font-size: 16px; color: $main-color; text-align: right;
+        padding-right: 15px;
+    }
+}

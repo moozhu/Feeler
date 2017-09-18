@@ -1,0 +1,73 @@
+//iOS
+.forward-enter-active,
+.back-enter-active{
+    transition: transform .4s;
+}
+
+.back-leave-active{
+    transition: transform .4s 0.05s;
+}
+.forward-leave-active {
+    opacity: 0;
+    transition: opacity .4s .1s, transform .4s .1s;
+}
+
+.back-enter,
+.back-enter-active,
+.back-enter-to,
+.forward-leave,
+.forward-leave-active,
+.forward-leave-to {
+    z-index: 1;
+}
+
+.back-leave,
+.back-leave-active,
+.back-leave-to,
+.forward-enter,
+.forward-enter-active,
+.forward-enter-to {
+    z-index: 2;
+}
+
+.forward-enter,
+.back-leave-active {
+    transform: translate3d(100%, 0, 0.01px);
+}
+
+.forward-leave-active,
+.back-enter {
+    transform: translate3d(-26%, 0, 0.01px);
+}
+
+//Android
+.bad-forward-enter-active,
+.bad-back-enter-active{
+    transition: transform .4s, opacity .4s;
+}
+
+.bad-back-leave-active,
+.bad-forward-leave-active{
+    transition: transform .4s .1s, opacity .4s;
+}
+
+.bad-forward-enter,
+.bad-back-leave-active {
+    opacity: 0;
+    transform: translate3d(50px, 0, 0.01px);
+}
+
+.bad-forward-leave-active,
+.bad-back-enter {
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0.01px);
+}
+
+.fade-leave-active,
+.fade-enter-active{
+  transition: all .25s;
+}
+.fade-enter,
+.fade-leave-active{
+  opacity: 0.9;
+}

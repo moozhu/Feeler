@@ -1,0 +1,92 @@
+@import '../../css/helpers/variables';
+@import '../../css/helpers/mixins';
+@import '../../css/helpers/functions';
+
+#message-box-wrap {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    font-size: rem(18);
+    text-align: center;
+    background-color: rgba(0, 0, 0, .3);
+    &::before{
+        @include inline-middle;
+    }
+}
+
+#message-box {
+    display: inline-block;
+    vertical-align: middle;
+    width: rem(270);
+    height: auto;
+    color: #333;
+    padding-top: em(15, 18);
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#message-box-title {
+    line-height: 1;
+    color: #000;
+    text-align: center;
+    padding: em(6, 18) em(15, 18) em(15, 18);
+}
+
+#message-box-body {
+    line-height: em(22.5, 15);
+    font-size: rem(15);
+    text-align: center;
+    padding: 0 em(15, 15) em(15, 15);
+    white-space: normal;
+}
+
+.message-box-body-msg {
+    display: inline-block;
+    vertical-align: top;
+    color: #888;
+    text-align: left;
+}
+
+#message-box-footer {
+    display: flex;
+    width: 100%; height: em(50, 18);
+    position: relative;
+}
+@include top-filament('#message-box-footer');
+
+.message-box-btn {
+    flex: 1;
+    border: none;
+    background-color: #ffffff;
+    outline: none;
+    font-size: rem(18);
+}
+
+.message-box-btn.primary {
+    color: $main-color;
+}
+
+.message-box-btn.slave {
+    color: #000;
+    position: relative;
+}
+@include left-filament('.message-box-btn.slave');
+
+.message-box-btn:hover,
+.v-modal-btn:active {
+    background-color: #eeeeee;
+}
+
+.message-box-enter-active,
+.message-box-leave-active {
+    transition: opacity .2s ease;
+}
+
+.message-box-enter,
+.message-box-leave-active {
+    opacity: 0;
+}

@@ -33,6 +33,8 @@ export default function (num) {
                 docEle.style.fontSize = (clientWidth / 10) + 'px';
             } else {
                 docEle.style.fontSize = '50px';
+                docEle.style.width = '500px';
+                docEle.style.margin = '0 auto';
             }
 
             setDpr();

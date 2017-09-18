@@ -1,7 +1,8 @@
 @import "./flexbox";
 @import "./reset";
 @import './form';
-@import '../helpers/_classes.scss';
+@import '../helpers/classes';
+@import '../helpers/variables';
 
 /* 页面结构 */
 .views{
